@@ -1,15 +1,11 @@
 ____
 # Night Owls Detector
 ____
-
 > **The script will show devman's students username whose sent  attempts after 00:00 o'clock**
-
 ##Requirement
-
-
 ```
-Need to install usefull modules by command **pip install -r requirement**.
-
+Need to install usefull modules by command pip install -r requirement.
+```
 ### Usage
     Run the script seek_dev_nighters.py
 
