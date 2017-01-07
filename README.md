@@ -12,7 +12,7 @@ On console run the script :
 ```
 python3.5 seek_dev_nighters.py
 ```
-and you will get result like below:
+and you will get result like below: 
  **Midnighters are**:
  id93321377
  vladmalakhov
