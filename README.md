@@ -3,8 +3,7 @@ ____
 > **The script will show devman's students username whose sent  attempts after 00:00 o'clock**
 
 ##Requirement
-
-####Need to install usefull modules **pytz** and **requests** for do it run command:
+Need to install usefull modules **pytz** and **requests** for do it run command:
 ```
 pip install -r requirement.
 ```
