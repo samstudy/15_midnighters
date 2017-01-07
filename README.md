@@ -13,10 +13,10 @@ On console run the script :
 python3.5 seek_dev_nighters.py
 ```
 and you will get result like below:
-**Midnighters are:
-id93321377
-vladmalakhov
-RuslanKurbanov
+**Midnighters are**:
+>id93321377
+>vladmalakhov
+*RuslanKurbanov
 id31656040
 СергейСтепаненко
 id14667221
@@ -25,7 +25,7 @@ mostm.endcape
 beastrock
 stria
 id213445897
-KonstantinNaumov**
+KonstantinNaumov
 # Project Goals
 
 The code is written for educational purposes. Training course for web-developers - [DEVMAN.org](https://devman.org)
