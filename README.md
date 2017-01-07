@@ -7,7 +7,7 @@ ____
 ##Requirement
 
 
-```Need to install usefull modules by command pip install -r requirement.```
+```Need to install usefull modules by command __pip install -r requirement__.```
 ### Usage
     Run the script seek_dev_nighters.py
 
