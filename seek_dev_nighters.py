@@ -9,6 +9,7 @@ format_time = '%H:%M:%S'
 start_midnight ='00:00:00'
 end_midnight = '06:00:00'
 
+
 def load_attempts():
     payload = {'page':0}
     inf_store = []
@@ -19,6 +20,7 @@ def load_attempts():
         payload['page'] = 0
     return inf_store
 
+
 def get_midnighter(user):
     if not user['timestamp']:
         return False
@@ -27,9 +29,6 @@ def get_midnighter(user):
         return True
     else:
         return False
-
-
-
 
 
 if __name__ == '__main__':
