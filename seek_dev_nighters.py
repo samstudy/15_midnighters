@@ -4,36 +4,34 @@ from pytz import timezone
 import pytz
 
 
-utc = pytz.utc
-format_time = '%H:%M:%S'
-start_midnight ='00:00:00'
-end_midnight = '06:00:00'
+
+END_MIDNIGHT = 6
 
 
 def load_attempts():
-    payload = {'page':0}
+    payload = {'page':1}
+    count_pages = requests.get('https://devman.org/api/challenges/solution_attempts/',params=payload).json()
+    pages = count_pages['number_of_pages'] 
     inf_store = []
-    for page in range(1,11):
-        payload['page'] += page
-        inf_from_url = requests.get('http://devman.org/api/challenges/solution_attempts/', params=payload).json()
+    for page in range(pages):
+        inf_from_url = requests.get('https://devman.org/api/challenges/solution_attempts/', params=payload).json()
         inf_store.extend(inf_from_url['records'])
-        payload['page'] = 0
+        payload['page'] += 1
     return inf_store
 
 
-def get_midnighter(user):
+def is_midnighter(user):
     if not user['timestamp']:
         return False
-    user_time = (utc.localize(datetime.utcfromtimestamp(user['timestamp']))).strftime(format_time)
-    if start_midnight < user_time < end_midnight:
-        return True
-    else:
+    user_time = ((pytz.utc).localize(datetime.utcfromtimestamp(user['timestamp']))).hour
+    if  user_time > END_MIDNIGHT:
         return False
+    return True
 
 
 if __name__ == '__main__':
     attempts = load_attempts()
-    midnighters = [user['username'] for user in attempts if get_midnighter(user)]
+    midnighters = [user['username'] for user in attempts if is_midnighter(user)]
     print("Midnighters are:")
     for user in midnighters:
         print(user)
