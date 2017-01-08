@@ -11,7 +11,8 @@ pip install -r requirement.
 On console run the script :
 ```
 python3.5 seek_dev_nighters.py
-Midnighters are:id93321377 vladmalakhov
+Midnighters are:
+id93321377 vladmalakhov
 RuslanKurbanov
 id31656040
 СергейСтепаненко
